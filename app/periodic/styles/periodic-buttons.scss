@@ -1,0 +1,53 @@
+
+.button1 {
+  left: 200px;
+  top: 150px;
+  position: absolute;
+  z-index: 20;
+}
+
+.button2 {
+  left: 200px;
+  top: 600px;
+  position: absolute;
+  z-index: 20;
+}
+
+.button3 {
+  left: 1400px;
+  top: 150px;
+  position: absolute;
+  z-index: 200;
+}
+
+.button4 {
+  left: 1400px;
+  top: 600px;
+  position: absolute;
+  z-index: 20;
+}
+
+.front-content {
+  opacity: 0.5;
+}
+
+.back-content {
+  opacity: 0.5;
+  box-shadow: 0px 0px 30px #ffffff;
+}
+
+.button1 .front, .button1 .back {
+  background-image:url(/periodic/images/table.png);
+}
+
+.button2 .front, .button2 .back {
+  background-image:url(/periodic/images/sphere.png);
+}
+
+.button3 .front, .button3 .back {
+  background-image:url(/periodic/images/helix.png);
+}
+
+.button4 .front, .button4 .back {
+  background-image:url(/periodic/images/grid.png);
+}

@@ -1,0 +1,142 @@
+.flip-button {
+  -webkit-perspective:800;
+  width: 720px;
+  height: 250px;
+  z-index: 150;
+  position: absolute;
+  font-size: 40px;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 200ms;
+
+    .front, .back {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      .text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-backface-visibility: hidden;
+
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+
+        span {
+          display: block;
+          max-width: 400px;
+        }
+      }
+    }
+
+    .front {
+      .text {
+        color: #000;
+      }
+    }
+
+    .back {
+      -webkit-transform: rotateX( 180deg );
+
+      .text {
+        color: #fff;
+      }
+    }
+  }
+
+  &.left {
+    left: 0;
+    text-align: right;
+    .card {
+      .front, .back {
+        background-position: right;
+        .text {
+          right: 280px;
+        }
+      }
+      .front {
+        .text {
+
+        }
+      }
+      .back {
+        .progress {
+          right: 250px;
+        }
+      }
+    }
+  }
+
+  &.right {
+    right: 0;
+    .card {
+      .front, .back {
+        background-position: left;
+        .text {
+          left: 280px;
+        }
+      }
+      .front {
+        .text {
+
+        }
+      }
+      .back {
+        .progress {
+          left: 250px;
+        }
+      }
+    }
+  }
+
+  // Adjust sizes for smaller buttons
+  &.small {
+    height: 250px;
+    &.left {
+      .card {
+        .front, .back {
+          .text {
+            right: 230px;
+          }
+        }
+        .back {
+          .progress {
+            right: 200px;
+          }
+        }
+      }
+    }
+
+    &.right {
+      .card {
+        .front, .back {
+          .text {
+            left: 230px;
+          }
+        }
+        .back {
+          .progress {
+            left: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  &.flipped .card {
+    -webkit-transform: rotateX( 180deg );
+  }
+}

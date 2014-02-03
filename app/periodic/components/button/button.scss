@@ -1,0 +1,62 @@
+.button {
+  background-color: #ffffff;
+  display: table;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #fff;
+  border-radius: 50%;
+  z-index: 100;
+  padding: 10px;
+}
+.button .content {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 50px;
+  color: #fff;
+  line-height: 40pt;
+  text-align: center;
+  text-shadow: -1px -1px 2px #222;
+  z-index: 150;
+}
+.button .icon {
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 180px;
+  margin:20px;
+  left:0;
+  top:0;
+  position: absolute;
+  z-index: 120;
+}
+
+.button .mask {
+  width: 220px;
+  height: 220px;
+  bottom: 0px;
+  left: 0px;
+  transition:1s ease;
+  -webkit-mask-box-image: url(/images/button-mask.svg);
+}
+.button .animation {
+  box-sizing: border-box;
+  width: 220px;
+  height: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(1,1,1,0);
+}
+.button .animationactive{
+  height:220px;
+  background:rgba(1,1,1,0.8);
+}
+
+
+
+
+
+

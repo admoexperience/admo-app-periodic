@@ -1,0 +1,66 @@
+
+@-webkit-keyframes hudRotate {
+  0%{
+    -webkit-transform:scale(1) rotate(0deg);
+  }
+  50%{
+    -webkit-transform:scale(1) rotate(180deg);
+  }
+  100%{
+    -webkit-transform:scale(1) rotate(360deg);
+  }
+}
+
+
+.highlight-source {
+  border-radius: 100%;
+  opacity:1;
+  background-image:url(/apps/flightcentre/images/tracker.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  z-index: 100;
+  -webkit-animation: hudRotate 2s linear infinite;
+}
+
+.highlight-source.small {
+  width: 100px;
+  height: 100px;
+}
+
+/* Editing specific instances of these highlight pulses
+
+.highlight-pulse:nth-of-type(2) {
+  left: 250px;
+}
+
+.highlight-pulse:nth-of-type(3) {
+  left: 500px;
+}
+
+*/
+
+
+@-webkit-keyframes pulse {
+  0% { border-color: rgba(255,255,255,0); }
+  40% { border-color: rgba(255,255,255,1); }
+  60% { border-color: rgba(255,255,255,1); }
+  100% { border-color: rgba(255,255,255,0); }
+}
+.highlight-pulse {
+  border-radius: 100%;
+  border: 10px solid #fff;
+  background-color: rgba(250,250,250,0.2);
+  width: 230px;
+  height: 230px;
+  z-index: 100;
+  -webkit-transition: width 250ms ease, height 250ms ease;
+  -webkit-animation: pulse 2s linear infinite;
+}
+
+.highlight-pulse.small {
+  width: 100px;
+  height: 100px;
+}
